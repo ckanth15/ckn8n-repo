@@ -1,0 +1,40 @@
+# -------------------------------------------------------------------
+# Persistent n8n data – credentials, workflows, execution logs, etc.
+n8n_data/
+
+# Backups or DB dumps you may create
+backups/
+*.tgz
+*.tar.gz
+*.sql
+*.sqlite      # (if you export the DB outside the volume)
+
+# Environment / secret files (if you decide to switch to .env)
+.env
+.env.*
+
+# TLS artifacts – never commit private keys
+*.pem
+*.key
+fullchain*.crt
+privkey*.key
+
+# Logs
+*.log
+logs/
+
+# Docker artefacts
+*.pid
+docker-compose.override.yml # personal tweaks that shouldn't go upstream
+
+# Editor & OS noise
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Node / Python clutter (not strictly needed here, but harmless)
+node_modules/
+**/__pycache__/
+*.py[cod]
+
