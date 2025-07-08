@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
-HOST=kc8n.easeurwork.cloud
+HOST=<your-website-domain>
 
 if ! docker ps --format '{{.Names}}' | grep -q '^n8n$'; then
   echo "✗ n8n container is not running" && exit 1
