@@ -1,0 +1,17 @@
+version: '3'
+services:
+  n8n:
+    image: n8nio/n8n:1.45.0
+    restart: always
+    ports:
+      - "5678:5678"
+    environment:
+      - N8N_BASIC_AUTH_ACTIVE=true
+      - N8N_BASIC_AUTH_USER=admin
+      - N8N_BASIC_AUTH_PASSWORD=<changeme>
+      - N8N_HOST=143.198.106.101
+      - N8N_PORT=5678
+      - NODE_ENV=production
+      - N8N_SECURE_COOKIE=false  # enable after HTTPS is configured
+    volumes:
+      - ./n8n_data:/home/node/.n8n
